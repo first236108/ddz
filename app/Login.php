@@ -12,7 +12,7 @@ class Login
 {
     public function test()
     {
-        $list = Db::table('t_user')->where('id', 4444)->find();
-        var_dump($list);
+        $list = Db::name('users')->where('user_id', 1)->find();
+        return $list;
     }
 }

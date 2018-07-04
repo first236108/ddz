@@ -8,8 +8,6 @@
 include_once './vendor/autoload.php';
 
 use app\Login;
-(new Login())->test();
-exit;
 
 $ws = new swoole_websocket_server("0.0.0.0", 9503);
 $ws->set([
@@ -21,9 +19,8 @@ $ws->set([
 ]);
 
 $ws->on('open', function ($ws, $request) {
-    $tt=new app\Login();
-    $tt->test();
     var_dump($request->fd, $request->get, $request->server);
+    $result = (new Login())->test();
     $ws->push($request->fd, json_encode($result));
 });
 
