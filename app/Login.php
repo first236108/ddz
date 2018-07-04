@@ -6,18 +6,13 @@
  * Date: 2018/7/4 17:06
  */
 namespace app;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use think\Db;
 include_once 'common.php';
 class Login
 {
     public function test()
     {
-        $db = new Capsule;
-        $db->addConnection(db_config());
-        $db->setAsGlobal();
-        $db->bootEloquent();
-
-        $list = $db->table('t_user')->where('id', 4444)->first();
+        $list = Db::table('t_user')->where('id', 4444)->find();
         var_dump($list);
     }
 }
