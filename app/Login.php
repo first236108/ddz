@@ -17,6 +17,6 @@ class Login
     public function test($ws, $fd)
     {
         $list = Db::name('users')->where('user_id', 1)->find();
-        $ws->push($fd, json_encode($list['nikename']));
+        $ws->push($fd, json_encode($list['nickname']));
     }
 }

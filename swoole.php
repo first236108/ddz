@@ -47,4 +47,4 @@ $ws->on('close', function ($ws, $fd) {
     $task_id = $ws->task($data);
 });
 
-//$ws->start();
+$ws->start();
