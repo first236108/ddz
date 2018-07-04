@@ -5,14 +5,18 @@
  * NickName: 柏宇娜
  * Date: 2018/7/4 17:06
  */
+
 namespace app;
+
 use think\Db;
+
 include_once 'common.php';
+
 class Login
 {
-    public function test()
+    public function test($ws, $fd)
     {
         $list = Db::name('users')->where('user_id', 1)->find();
-        return $list;
+        $ws->push($fd, json_encode($list['nikename']));
     }
 }

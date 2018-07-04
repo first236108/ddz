@@ -20,8 +20,8 @@ $ws->set([
 
 $ws->on('open', function ($ws, $request) {
     var_dump($request->fd, $request->get, $request->server);
-    $result = (new Login())->test();
-    $ws->push($request->fd, json_encode($result));
+    (new Login())->test($ws,$request->fd);
+    //$ws->push($request->fd, json_encode($result));
 });
 
 $ws->on('message', function ($ws, $frame) {
