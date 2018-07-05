@@ -25,8 +25,9 @@ $ws->on('open', function ($ws, $request) {
 });
 
 $ws->on('message', function ($ws, $frame) {
-    $ws->push($frame->fd, json_encode($result));
-    $task_id = $ws->task($send);
+    var_dump($frame);
+    $ws->push($frame->fd, json_encode($frame));
+    //$task_id = $ws->task($send);
 
 });
 
