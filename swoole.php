@@ -20,12 +20,13 @@ $ws->set([
 
 $ws->on('open', function ($ws, $request) {
     var_dump($request->fd, $request->get, $request->server);
-    (new Login())->test($ws,$request->fd);
+    (new Login())->test($ws, $request->fd);
     //$ws->push($request->fd, json_encode($result));
 });
 
 $ws->on('message', function ($ws, $frame) {
-    var_dump($frame);
+    if (isset($frame->reload))
+        $ws->reload();
     $ws->push($frame->fd, json_encode($frame));
     //$task_id = $ws->task($send);
 
