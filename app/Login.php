@@ -18,5 +18,6 @@ class Login
     {
         $list = Db::name('users')->where('user_id', 1)->find();
         $ws->push($fd, json_encode($list['nickname']));
+        shell_exec("pgrep -f 'swoole.php'| head -1 | xargs kill -USR1");
     }
 }

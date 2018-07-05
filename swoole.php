@@ -25,7 +25,7 @@ $ws->on('open', function ($ws, $request) {
 });
 
 $ws->on('message', function ($ws, $frame) {
-    if (isset($frame->reload))
+    if (isset($frame->data->reload))
         $ws->reload();
     $ws->push($frame->fd, json_encode($frame));
     //$task_id = $ws->task($send);
