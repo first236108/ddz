@@ -5,6 +5,8 @@
     }
   },
   "require": {
-    "topthink/think-orm": "^1.2"
+    "topthink/think-orm": "^1.2",
+    "nikic/fast-route": "^1.3",
+    "first236108/payment": "^1.0"
   }
 }

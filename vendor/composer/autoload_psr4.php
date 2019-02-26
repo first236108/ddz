@@ -8,4 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'think\\' => array($vendorDir . '/topthink/think-orm/src'),
     'app\\' => array($baseDir . '/app'),
+    'Payment\\' => array($vendorDir . '/first236108/payment/src'),
+    'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
 );

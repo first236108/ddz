@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '33197a0023ced5fbf8f861d1c4ca048d' => $vendorDir . '/topthink/think-orm/src/config.php',
+    '253c157292f75eb38082b5acb06f3f01' => $vendorDir . '/nikic/fast-route/src/functions.php',
 );
