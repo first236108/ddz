@@ -6,46 +6,25 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit2ea03e5ca70c05a4f12eece299d4daa2
 {
-    public static $files = array (
-        '33197a0023ced5fbf8f861d1c4ca048d' => __DIR__ . '/..' . '/topthink/think-orm/src/config.php',
-        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        't' => 
+        'l' => 
         array (
-            'think\\' => 6,
+            'lib\\' => 4,
         ),
         'a' => 
         array (
             'app\\' => 4,
         ),
-        'P' => 
-        array (
-            'Payment\\' => 8,
-        ),
-        'F' => 
-        array (
-            'FastRoute\\' => 10,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'think\\' => 
+        'lib\\' => 
         array (
-            0 => __DIR__ . '/..' . '/topthink/think-orm/src',
+            0 => __DIR__ . '/../..' . '/lib',
         ),
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
-        ),
-        'Payment\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/first236108/payment/src',
-        ),
-        'FastRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
     );
 

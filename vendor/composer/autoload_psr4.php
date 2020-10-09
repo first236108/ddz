@@ -6,8 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'think\\' => array($vendorDir . '/topthink/think-orm/src'),
+    'lib\\' => array($baseDir . '/lib'),
     'app\\' => array($baseDir . '/app'),
-    'Payment\\' => array($vendorDir . '/first236108/payment/src'),
-    'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
 );

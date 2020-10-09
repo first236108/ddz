@@ -7,7 +7,7 @@
  */
 include_once './vendor/autoload.php';
 
-use app\Login;
+use app\Index;
 
 $ws = new swoole_websocket_server("0.0.0.0", 9503);
 $ws->set([
@@ -20,7 +20,7 @@ $ws->set([
 
 $ws->on('open', function ($ws, $request) {
     var_dump($request->fd, $request->get, $request->server);
-    (new Login())->test($ws, $request->fd);
+    (new Index())->test($ws, $request->fd);
     //$ws->push($request->fd, json_encode($result));
 });
 

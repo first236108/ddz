@@ -1,12 +1,11 @@
 {
   "autoload": {
     "psr-4": {
-      "app\\": "app/"
+      "app\\": "app/",
+      "lib\\": "lib/"
     }
   },
   "require": {
-    "topthink/think-orm": "^1.2",
-    "nikic/fast-route": "^1.3",
-    "first236108/payment": "^1.0"
+    "nikic/fast-route": "^1.3"
   }
 }
